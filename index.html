@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroMarket | Ropa Vintage Chile</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="carro-lateral" id="carrito">
+        <a href="#" class="cerrar-btn">Cerrar ×</a>
+        <h2>Tu Carrito</h2>
+        <div class="lista-carro">
+            <p>Aún no has seleccionado ninguna joyita vintage.</p>
+        </div>
+    </aside>
+
+    <header class="cabecera">
+        <div class="logo">RETRO<span>MARKET</span></div>
+        <nav>
+            <ul class="menu-nav">
+                <li><a href="#productos">Catálogo</a></li>
+                <li><a href="#vender">Vender</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#carrito" class="boton-carro">🛒 Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada">
+            <div class="portada-texto">
+                <h1>Ropa con Historia</h1>
+                <p>Las mejores piezas de los 80s y 90s para tu clóset, al precio de tu bolsillo.</p>
+                <a href="#productos" class="btn-ver">Ver Catálogo</a>
+            </div>
+        </section>
+
+        <section id="productos" class="catalogo">
+            <h2 class="titulo-seccion">Lo nuevo del catálogo</h2>
+            <div class="barra-busqueda">
+                <div class="buscador">
+                    <input type="text" placeholder="Buscar chaquetas, poleras..." class="input-busqueda">
+                    <button class="btn-buscar">🔍</button>
+                </div>
+                <div class="filtros">
+                    <button class="filtro-btn active">Todo</button>
+                    <button class="filtro-btn">Chaquetas</button>
+                    <button class="filtro-btn">Poleras</button>
+                    <button class="filtro-btn">Pantalones</button>
+                    <button class="filtro-btn">Sombreros</button>
+                </div>
+            </div>
+
+            <div class="grilla-productos">
+                <article class="tarjeta disponible">
+                    <span class="etiqueta">Disponible</span>
+                    <div class="foto-caja" data-talla="M" data-estado="Excelente">
+                        <img src="assets/Chaqueta.webp" alt="Chaqueta Denim">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Chaqueta Denim 90s</h3>
+                        <p class="precio">$25.000</p>
+                        <button class="btn-agregar">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta vendido">
+                    <span class="etiqueta">Vendido</span>
+                    <div class="foto-caja" data-talla="L" data-estado="Buen estado">
+                        <img src="assets/polera.jpg" alt="Polera Retro">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Polera Rock 80s</h3>
+                        <p class="precio">$12.000</p>
+                        <button class="btn-agregar" disabled>Agotado</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta disponible">
+                    <span class="etiqueta">Disponible</span>
+                    <div class="foto-caja" data-talla="32" data-estado="Como nuevo">
+                        <img src="assets/pantalon.webp" alt="Pantalón Retro">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Pantalón Cargo Vintage</h3>
+                        <p class="precio">$18.500</p>
+                        <button class="btn-agregar">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta disponible">
+                    <span class="etiqueta">Disponible</span>
+                    <div class="foto-caja" data-talla="42" data-estado="Buen estado">
+                        <img src="assets/zapatillas.jpg" alt="Zapatillas Vintage">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Zapatillas 80s</h3>
+                        <p class="precio">$15.000</p>
+                        <button class="btn-agregar">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta disponible">
+                    <span class="etiqueta">Disponible</span>
+                    <div class="foto-caja" data-talla="S" data-estado="Excelente">
+                        <img src="assets/camisaL.webp" alt="Camisa Hawaiana">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Camisa Vintage</h3>
+                        <p class="precio">$20.000</p>
+                        <button class="btn-agregar">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta vendido">
+                    <span class="etiqueta">Vendido</span>
+                    <div class="foto-caja" data-talla="M" data-estado="Buen estado">
+                        <img src="assets/sombrero.jpg" alt="Sombrero Fedora">
+                    </div>
+                    <div class="info-producto">
+                        <h3>Sombrero Fedora</h3>
+                        <p class="precio">$18.000</p>
+                        <button class="btn-agregar" disabled>Agotado</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="vender" class="seccion-vender">
+            <div class="caja-formulario">
+                <h2>¡Publica tu prenda!</h2>
+                <p class="subtitulo-form">Dale una segunda vida a lo que ya no usas.</p>
+                <form class="formulario">
+                    <div class="campo">
+                        <label for="nombre-prenda">Nombre de la prenda *</label>
+                        <input type="text" id="nombre-prenda" placeholder="Ej: Chaqueta Denim 90s" minlength="5"
+                            required>
+                        <span class="ayuda-campo">Mínimo 5 caracteres</span>
+                    </div>
+
+                    <div class="doble-columna">
+                        <div class="campo">
+                            <label for="categoria">Categoría *</label>
+                            <select id="categoria" required>
+                                <option value="" disabled selected>Selecciona...</option>
+                                <option value="chaquetas">Chaquetas</option>
+                                <option value="poleras">Poleras</option>
+                                <option value="pantalones">Pantalones</option>
+                                <option value="sombreros">Sombreros</option>
+                                <option value="zapatillas">Zapatillas</option>
+                                <option value="accesorios">Accesorios</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="talla">Talla *</label>
+                            <select id="talla" required>
+                                <option value="" disabled selected>Selecciona...</option>
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>Única</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="precio-prenda">Precio (CLP) *</label>
+                        <input type="number" id="precio-prenda" placeholder="Ej: 15000" min="1000" required>
+                        <span class="ayuda-campo">Mínimo $1.000</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="descripcion">Descripción *</label>
+                        <textarea id="descripcion" rows="3"
+                            placeholder="Cuéntanos el estado de la prenda, material, de qué época es..."
+                            required></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <label>Estado de la prenda *</label>
+                        <div class="grupo-radio">
+                            <label class="opcion-radio">
+                                <input type="radio" name="estado-prenda" value="nuevo" required> Como nuevo
+                            </label>
+                            <label class="opcion-radio">
+                                <input type="radio" name="estado-prenda" value="bueno"> Buen estado
+                            </label>
+                            <label class="opcion-radio">
+                                <input type="radio" name="estado-prenda" value="regular"> Regular
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="campo-check">
+                        <input type="checkbox" id="terminos" required>
+                        <label for="terminos">Acepto que la prenda es original y de segunda mano.</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Subir Producto</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina" id="ubicacion">
+        <div class="mapa-container">
+            <h3>Nuestra Tienda Física</h3>
+            <div class="mapa-ubicacion">
+                <p>📍 Santiago, Chile</p>
+                <p class="direc">Alameda 1234, Edificio RetroMarket</p>
+                <div class="mapa-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1234!2d-70.65!3d-33.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI3JzAwLjAiUyA3MMKwMzknMDAuMCJX!5e0!3m2!1ses!2scl!4v1600000000000!5m2!1ses!2scl"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <p class="copyright"> &copy; 2026 RetroMarket | Todos los derechos reservados para la tienda.</p>
+    </footer>
+
+</body>
+
+</html>
